@@ -1,0 +1,67 @@
+.how
+    padding: 80px 0 30px
+    &__title
+        @extend %title-font
+        font-size: 36px
+        line-height: 51px
+        font-weight: 700
+        text-align: center
+        margin-bottom: 40px
+    &__items-box
+        display: flex
+        align-items: flex-end
+        border-bottom: 2px solid #36383881
+        position: relative
+        padding-bottom: 9px
+        &::before
+            content: ''
+            position: absolute
+            bottom: -5px
+            left: 0
+            width: 10px
+            height: 10px
+            border-radius: 50%
+            background: $titleblack
+
+    &__item
+        max-width: 250px
+        display: flex
+        height: 100%
+        flex-wrap: wrap
+        align-items: center
+        position: relative
+    &__item--production
+        margin-left: 317px
+        
+        &::after
+            content: ''
+            position: absolute
+            width: 20px
+            bottom: 0
+            left: -6px
+            transform: rotate(90deg) 
+            height: 2px
+            background: $footercolor
+    &__item--consultation,
+    &__item--production
+        padding-bottom: 38px
+    &__item--measurement
+        padding-top: 38px
+        margin-left: 350px
+        &::before
+            content: ''
+            position: absolute
+            width: 20px
+            top: 7px
+            left: -6px
+            transform: rotate(90deg) 
+            height: 2px
+            background: $footercolor
+            
+    &__item-title
+        @extend %title-font
+        font-weight: 700
+        margin-left: 13px
+    &__item-subtitle
+        @extend %subtitle-font
+        margin-top: 13px

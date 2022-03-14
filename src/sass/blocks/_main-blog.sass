@@ -1,0 +1,47 @@
+.main-blog
+    text-align: center
+    margin-bottom: 100px
+    &__title
+        @extend %title-font
+        max-width: 430px
+        font-weight: 700
+        font-size: 36px
+        line-height: 51px
+        margin: 0 auto
+        margin-bottom: 35px
+    &__items
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__link
+        margin-bottom: 20px
+        display: inline-block
+        & img
+            width: 100%
+            object-fit: cover
+            border-radius: 20px
+            transition: $buttontransition
+            transform:  scale(1) 
+        &:hover img
+            transform:  scale(1.020) 
+            transition: $buttontransition
+    &__links 
+        @extend %blog-data
+        margin-bottom: 20px
+        text-align: left
+        
+    &__author,
+    &__topic
+        text-decoration: underline
+    &__author:hover
+        color: $hovercolor
+        transition: $buttontransition
+    &__topic:hover
+        color: $hovercolor
+        transition: $buttontransition
+    &__article-title
+        text-align: start
+
+.main-blog__item-margin--right
+    margin-right: 50px
+        

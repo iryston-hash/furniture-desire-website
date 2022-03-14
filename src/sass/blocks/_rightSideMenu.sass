@@ -1,0 +1,57 @@
+.rightside-menu
+    position: absolute
+    right: 0 
+    top: 0
+    bottom: 0
+    max-width: 694px
+    width: 100%
+    min-height: max-content
+    background: linear-gradient(to top, #ec870349, #ffffff18)
+    backdrop-filter:  blur(20px)
+    padding-top: 40px
+     
+    z-index: 10 
+    transition: all .3s cubic-bezier(0.32, 0, 0.67, 0) 
+    &.rightside-menu--close
+        transform: translateX(150%)
+    &__close
+        background: transparent
+        border: none
+        cursor: pointer
+        margin-left: 50px
+        margin-bottom: 60px
+        
+    &__content
+        max-width: 483px
+        text-align: center
+        margin: 0 auto
+    &__logo
+        display: inline-block
+        margin-bottom: 26px
+    &__title
+        @extend %title-font
+        display: flex
+        flex-direction: column-reverse
+        align-items: center
+        font-size: 36px
+        line-height: 51px
+        position: relative
+        padding-bottom: 20px
+        &::after
+            content: ''
+            background: #6d72786b
+            width: 250px
+            height: 1px
+            bottom: 10px
+            position: absolute
+            border-radius: 20px
+    &__subtitle
+        @extend %subtitle-font
+        padding-bottom: 75px
+        margin: 0
+    &__image
+        max-width: 485px
+        
+        
+
+        

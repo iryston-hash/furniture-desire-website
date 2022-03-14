@@ -1,0 +1,75 @@
+.new-collection
+    text-align: center
+    padding: 45px 0 105px
+    &__title
+        color: $titleblack
+        font-size: 36px
+        line-height: 51px
+        font-weight: 700
+        padding-bottom: 25px
+        margin-bottom: 25px
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            width: 250px
+            left: 0
+            bottom: 0
+            height: 1px
+            background: #6d727875
+    &__subtitle
+        color: $default
+        min-width: 730px
+        margin: 0 auto 30px
+.collection
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    grid-gap: 30px
+    &__item
+        position: relative
+        &:hover
+            .collection__info
+                opacity: 1
+                
+    &__images
+        min-width: 350px
+        border-radius: 15px
+        
+        object-fit: cover
+    &__info
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba(#fff, .7)
+        padding: 10px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        opacity: 0
+        transition: $maintransition
+    &__info-title
+        @extend %title-font
+        font-size: 20px
+        line-height: 24px
+        position: relative
+        padding-bottom: 19px
+        margin-bottom: 19px
+        &::after
+            content: ''
+            position: absolute
+            right: 0
+            left: 0
+            bottom: 0
+            margin: 0 auto
+            width: 80%
+            height: 1px
+            background: $hrcolor
+    &__info-subtitle
+        @extend %subtitle-font
+        font-weight: 600
+        font-size: 14px
+        line-height: 28px
+        color: $footercolor

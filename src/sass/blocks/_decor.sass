@@ -1,0 +1,23 @@
+.decor
+    padding: 170px 0 155px
+    background: url(../images/decor-bg.webp) center (center/cover) no-repeat 
+    width: 100vw
+    &__title 
+        @extend %title-font
+        font-weight: 700
+        font-size: 60px
+        line-height: 80px
+        max-width: 730px
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            width: 200px
+            height: 1px
+            bottom: 0 
+            left: 0
+            margin: 0 auto
+            background: $hrcolor
+    &__subtitle
+        @extend %subtitle-font
+        line-height: 28px
